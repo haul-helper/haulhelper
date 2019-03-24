@@ -33,9 +33,6 @@ export default {
       },
     }),
     new HtmlWebpackPlugin({
-      // inject: false,
-      title: 'Evan Kysley.',
-      // favicon: path.join(__dirname, 'src', 'assets', 'img', 'favicon.ico'),
       template: path.join(__dirname, 'src', 'index.ejs'),
       minify: {
         collapseWhitespace: true,
@@ -47,7 +44,7 @@ export default {
     extensions: ['.js', '.jsx', '.json', '.ts', '.tsx'],
     modules: [
       path.join(__dirname, 'src'),
-      path.join(__dirname, 'node_modules'),
+      'node_modules',
     ],
     alias: {
       Components: path.join(__dirname, 'src/components'),
