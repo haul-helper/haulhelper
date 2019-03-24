@@ -5,23 +5,38 @@ import { Global, css } from '@emotion/core'
 /* Import Hot Routes */
 // import Routes from '../hot-routes'
 /* Import Other  */
-import TR from '../assets/fonts/Theinhardt-Regular.woff'
-import TB from '../assets/fonts/Theinhardt-Bold.woff'
 
 const global = css`
-    @font-face {
-    font-family: Theinhardt;
-    src: url(${TR}) format('woff');
-  }
   @font-face {
-    font-family: Theinhardt-Bold;
-    src: url(${TB}) format('woff');
+    font-family: "Manrope";
+    src: url("../assets/manrope-extrabold.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 800; }
+  @font-face {
+    font-family: "Manrope";
+    src: url("../assets/manrope-bold.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 700; }
+  @font-face {
+    font-family: "Manrope";
+    src: url("../assets/manrope-medium.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 500; }
+  @font-face {
+    font-family: "Manrope";
+    src: url("../assets/manrope-regular.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 400; }
+  *,*:before,*:after {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
   }
   * {
     box-sizing: border-box;
   }
   body {
-    font-family: Theinhardt;
+    font-family: "Manrope", sans-serif;
     letter-spacing: auto;
     line-height: normal;
     text-rendering: optimizeLegibility;
@@ -35,8 +50,8 @@ const global = css`
     min-height: 100vh;
     max-height: 100vh;
     overflow-x: hidden;
-    background-color: #fff;
-    color: #000;
+    background-color: #f8f6e3;
+    color: #fff;
   }
 `
 
