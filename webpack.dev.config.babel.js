@@ -11,7 +11,7 @@ export default {
   entry: {
     app: [
       // '@babel/polyfill',
-      path.join(__dirname, 'src', 'index.js'),
+      path.join(__dirname, 'src', 'index.tsx'),
     ],
   },
   output: {
