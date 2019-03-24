@@ -1,0 +1,57 @@
+import facepaint from 'facepaint'
+
+export const transitions = {
+  default: '200ms ease-in-out',
+}
+
+export const typography = {
+  headings: {
+    small: {
+      fontSize: '1.2rem',
+    },
+    medium: {
+      fontSize: '1.5rem',
+    },
+    large: {
+      fontSize: '2rem',
+    },
+    xlarge: {
+      fontSize: '4.25rem',
+    },
+  },
+  text: {
+    xsmall: {
+      fontSize: '0.85rem',
+    },
+    small: {
+      fontSize: '1rem',
+    },
+    medium: {
+      fontSize: '1.2rem',
+    },
+    large: {
+      fontSize: '1.5rem',
+    },
+  },
+}
+
+const white = '#fff'
+const black = '#16171a'
+
+const indigo = {
+  i3: '#9aa3e8',
+  i5: '#2e41d1',
+  i7: '#2332a3',
+}
+
+export const colors = {
+  white,
+  black,
+  ...indigo,
+}
+
+export const mq = facepaint([
+  '@media(max-width: 420px)',
+  '@media(max-width: 920px)',
+  '@media(max-width: 1120px)',
+])
