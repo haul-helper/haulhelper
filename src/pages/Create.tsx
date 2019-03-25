@@ -1,11 +1,9 @@
-import React from 'react'
+import React from "react";
 
 class Create extends React.Component {
   render() {
-    return (
-      <span>hello</span>
-    )
+    return <span>hello</span>;
   }
 }
 
-export default Create
+export default Create;
