@@ -26,15 +26,11 @@ const Tab = styled(NavLink)`
   text-decoration: none;
   color: ${colors.black};
   display: grid;
-  grid-template-areas: 'icon label';
-  grid-template-rows: auto;
-  grid-template-columns: auto auto;
   align-items: center;
   justify-items: center;
-  font-weight: 900;
+  font-weight: 400;
 
   :hover {
-    opacity: 0.5;
     text-decoration: underline;
   }
 

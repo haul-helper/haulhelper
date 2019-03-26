@@ -9,6 +9,8 @@ import {
   HeaderLogo,
   CreateTab,
   MeTab,
+  LoginTab,
+  SigninTab,
 } from './Header.styles'
 
 class Header extends React.Component {
@@ -21,6 +23,8 @@ class Header extends React.Component {
           </Link>
           <CreateTab to="/create">create</CreateTab>
           <MeTab to="/profile">profile</MeTab>
+          <LoginTab to="/profile">log in</LoginTab>
+          <SigninTab to="/profile">sign up</SigninTab>
         </HeaderContainer>
       </HeaderWrapper>
     )
