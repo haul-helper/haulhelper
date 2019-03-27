@@ -1,58 +1,56 @@
 import styled from '@emotion/styled'
 import { NavLink } from 'react-router-dom'
 
-import { colors, transitions } from 'Styled/Theme'
+import { colors } from 'Styled/Theme'
 
-const HeaderWrapper = styled.header``
+const HeaderWrapper = styled.header`
+  width: 100%;
+`
 
 const HeaderContainer = styled.nav`
   width: 100%;
   display: grid;
   position: relative;
-  grid-template-columns: auto auto auto 1fr auto;
-  grid-template-rows: 1fr;
-  grid-template-areas: 'logo create me . login signin';
+  grid-template-columns: auto auto 1fr auto 1fr auto auto;
   z-index: 99;
   align-items: center;
   margin-top: 3vh;
 `
 
 const Tab = styled(NavLink)`
-  padding: 0 1em;
-  transition: all ${transitions.default};
+  margin: 0 1em;
   position: relative;
-
-  margin-left: 1em;
   text-decoration: none;
-  color: ${colors.black};
+  color: ${colors.g9};
   display: grid;
   align-items: center;
   justify-items: center;
   font-weight: 400;
 
   :hover {
-    text-decoration: underline;
+    color: ${colors.g5};
   }
 
   &.active {
-    color: ${colors.i5}
+    color: ${colors.i5};
+    text-decoration: underline;
   }
 `
 
 const CreateTab = styled(Tab)`
-  grid-area: create;
+  grid-column: 2;
 `
 
 const MeTab = styled(Tab)`
-  grid-area: me;
+  grid-column: 4;
 `
 
 const LoginTab = styled(Tab)`
-  grid-area: login;
+  grid-column: -2;
 `
 
 const SigninTab = styled(Tab)`
-  grid-area: signin;
+  grid-column: -1;
 `
 
 const HeaderLogo = styled('img')`
