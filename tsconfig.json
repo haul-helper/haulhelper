@@ -1,8 +1,9 @@
 {
   "compilerOptions": {
+    "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
     "noFallthroughCasesInSwitch": true,
-    "noUnusedParameters": true,
+    // "noUnusedParameters": true,
     "noImplicitReturns": true,
     "moduleResolution": "node",
     "esModuleInterop": true,

@@ -23,7 +23,7 @@ class Header extends React.Component {
           </Link>
           <CreateTab to="/create">create</CreateTab>
           <MeTab to="/profile">profile</MeTab>
-          <LoginTab to="/profile">log in</LoginTab>
+          <LoginTab to="/profile">register</LoginTab>
           <SigninTab to="/profile">sign up</SigninTab>
         </HeaderContainer>
       </HeaderWrapper>

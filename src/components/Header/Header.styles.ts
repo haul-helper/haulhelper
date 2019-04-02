@@ -25,7 +25,8 @@ const Tab = styled(NavLink)`
   display: grid;
   align-items: center;
   justify-items: center;
-  font-weight: 400;
+  font-weight: 500;
+  font-size: 0.9rem;
 
   :hover {
     color: ${colors.g5};
@@ -56,7 +57,6 @@ const SigninTab = styled(Tab)`
 const HeaderLogo = styled('img')`
   height: 60px;
 `
-
 
 export {
   HeaderContainer,
