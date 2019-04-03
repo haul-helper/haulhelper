@@ -7,7 +7,7 @@ import { setContext } from 'apollo-link-context'
 import { InMemoryCache } from 'apollo-cache-inmemory'
 
 const httpLink = new HttpLink({
-  uri: 'http://138.197.128.14/',
+  uri: 'http://api.haulhelper.com/',
   credentials: 'same-origin',
 })
 
@@ -64,4 +64,4 @@ const client = new ApolloClient({
   cache,
 })
 
-export { client }
+export default client
