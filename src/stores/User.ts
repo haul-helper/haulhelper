@@ -1,4 +1,6 @@
-import { observable, computed, action } from 'mobx'
+import { observable, computed, action, flow } from 'mobx'
+
+import client from 'Services/Client'
 
 interface User {
   id: string,
@@ -9,12 +11,28 @@ interface User {
 }
 
 class UserStore {
-  @observable me: User? = null
+  @observable me: User | null = null
 
   @observable pullingLoginData: boolean = false
 
   @observable updatingUser: boolean = false
 
+  @action
+  login = flow(function * (this: UserStore) {
+    try {
+      this.pullingLoginData = true
+      const { data } = yield client.query({
+        query: 'login',
+      })
+    } catch (err) {
+      console.log(err)
+    } finally {
+
+    }
+  })
+
+  @computed
+  isLoggedIn = () => !!this.me
 }
 
 export const userStore = new UserStore()
