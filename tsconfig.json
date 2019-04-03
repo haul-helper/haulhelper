@@ -12,7 +12,15 @@
     "target": "es2015",
     "module": "es2015",
     "strict": true,
-    "jsx": "react"
+    "jsx": "react",
+    "baseUrl": "src",
+    "paths": {
+      "Components": ["src/components"],
+      "Pages": ["src/pages"],
+      "Styled": ["src/styled"],
+      "Services": ["src/services"],
+      "Stores": ["src/stores"]
+    }
   },
   "include": [
     "src/**/*"
