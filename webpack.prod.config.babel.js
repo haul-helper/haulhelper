@@ -20,7 +20,7 @@ export default {
     path: path.join(__dirname, 'dist'),
     filename: 'assets/[name].[chunkhash].js',
     chunkFilename: 'assets/[name].[chunkhash].js',
-    publicPath: path.join(__dirname, 'dist'),
+    publicPath: '/',
   },
   plugins: [
     new webpack.DefinePlugin({
