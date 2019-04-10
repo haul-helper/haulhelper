@@ -78,9 +78,9 @@ export default {
       },
       {
         test: /\.(eot|ttf|woff|woff2)$/i,
-        exclude: /node_modules/,
-        use: ['url-loader'],
-        include: path.join(__dirname, 'src'),
+        use: [{
+          loader: 'file-loader',
+        }]
       },
     ],
   },

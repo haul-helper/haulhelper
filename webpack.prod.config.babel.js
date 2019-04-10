@@ -27,7 +27,7 @@ export default {
         NODE_ENV: JSON.stringify(process.env.NODE_ENV || 'production'),
       },
     }),
-    new CleanWebpackPlugin(['dist']),
+    new CleanWebpackPlugin(),
     new webpack.HashedModuleIdsPlugin(),
     new WebpackChunkHash(),
     new CompressionWebpackPlugin({
@@ -97,11 +97,6 @@ export default {
         ],
         include: path.join(__dirname, 'src'),
       },
-      // {
-      //   test: /\.(jpg|jpeg|png|gif)$/i,
-      //   use: ['file-loader'],
-      //   include: path.join(__dirname, 'src'),
-      // },
       {
         test: /\.svg$/,
         loader: 'svg-url-loader',
@@ -111,9 +106,10 @@ export default {
         },
       },
       {
-        test: /\.(eot|ttf|woff|woff2)$/i,
-        use: ['url-loader'],
-        include: path.join(__dirname, 'src'),
+        test: /\.(eot|ttf|woff|woff2)$/,
+        use: [{
+          loader: 'file-loader',
+        }]
       },
     ],
   },
