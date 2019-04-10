@@ -56,7 +56,7 @@ export default {
         minifyURLs: true,
       },
     }),
-    new CopyWebpackPlugin([{ from: 'src/assets/fonts', to: path.join(__dirname, 'dist/assets/fonts') }]),
+    new CopyWebpackPlugin([{ from: 'src/assets/fonts', to: 'assets/fonts' }]),
     // new BundleAnalyzerPlugin(),
   ],
   resolve: {
