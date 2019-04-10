@@ -78,9 +78,9 @@ export default {
       },
       {
         test: /\.(eot|ttf|woff|woff2)$/i,
-        use: [{
+        use: {
           loader: 'file-loader',
-        }]
+        },
       },
     ],
   },

@@ -7,6 +7,7 @@ import CompressionWebpackPlugin from 'compression-webpack-plugin'
 import CleanWebpackPlugin from 'clean-webpack-plugin'
 import TerserPlugin from 'terser-webpack-plugin'
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer'
+import CopyWebpackPlugin from 'copy-webpack-plugin'
 
 export default {
   entry: {
@@ -19,7 +20,7 @@ export default {
     path: path.join(__dirname, 'dist'),
     filename: 'assets/[name].[chunkhash].js',
     chunkFilename: 'assets/[name].[chunkhash].js',
-    publicPath: '/',
+    publicPath: path.join(__dirname, 'dist'),
   },
   plugins: [
     new webpack.DefinePlugin({
@@ -55,6 +56,7 @@ export default {
         minifyURLs: true,
       },
     }),
+    new CopyWebpackPlugin([{ from: 'src/assets/fonts', to: path.join(__dirname, 'dist/assets/fonts') }]),
     // new BundleAnalyzerPlugin(),
   ],
   resolve: {
@@ -106,10 +108,10 @@ export default {
         },
       },
       {
-        test: /\.(eot|ttf|woff|woff2)$/,
-        use: [{
+        test: /\.(eot|ttf|woff|woff2)$/i,
+        use: {
           loader: 'file-loader',
-        }]
+        },
       },
     ],
   },

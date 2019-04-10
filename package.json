@@ -69,6 +69,7 @@
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
     "clean-webpack-plugin": "^2.0.1",
     "compression-webpack-plugin": "^2.0.0",
+    "copy-webpack-plugin": "^5.0.2",
     "core-js": "3",
     "eslint": "^5.15.3",
     "eslint-config-airbnb": "^17.1.0",
