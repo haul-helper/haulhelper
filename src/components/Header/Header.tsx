@@ -1,34 +1,17 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import {Link} from 'react-navi'
+import h2 from 'h2/assets/images/h2.svg'
 
-import h2 from '../../assets/images/h2.svg'
+import {HeaderWrapper, HeaderContainer, HeaderLogo} from './Header.styles'
 
-import {
-  HeaderWrapper,
-  HeaderContainer,
-  HeaderLogo,
-  CreateTab,
-  MeTab,
-  LoginTab,
-  SigninTab,
-} from './Header.styles'
-
-class Header extends React.Component {
-  render() {
-    return (
-      <HeaderWrapper>
-        <HeaderContainer>
-          <Link to="/home">
-            <HeaderLogo src={h2} />
-          </Link>
-          <CreateTab to="/create">create</CreateTab>
-          <MeTab to="/profile">profile</MeTab>
-          <LoginTab to="/profile">register</LoginTab>
-          <SigninTab to="/profile">sign up</SigninTab>
-        </HeaderContainer>
-      </HeaderWrapper>
-    )
-  }
-}
+const Header = () => (
+  <HeaderWrapper>
+    <HeaderContainer>
+      <Link href="/">
+        <HeaderLogo src={h2} />
+      </Link>
+    </HeaderContainer>
+  </HeaderWrapper>
+)
 
 export default Header
