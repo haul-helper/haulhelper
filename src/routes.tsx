@@ -1,29 +1,19 @@
-import React, {Suspense} from 'react'
-import {mount, route, lazy, redirect} from 'navi'
-import {Router, View} from 'react-navi'
-/* */
-import Home from 'h2/pages/Home'
-import Header from 'h2/components/Header/Header'
-import {Container} from 'h2/styled/Container'
+import React from 'react'
+import {Switch, Route} from 'react-router-dom'
 
-const routes = mount({
-  '/': route({
-    title: 'h2 Valet',
-    view: <Home />,
-  }),
-  '/:id': redirect(req => `/a/${req.params.id}`),
-  '/a': lazy(() => import('h2/pages/View')),
-})
+import Create from 'Pages/Create'
+import PrivateRoute from 'Components/PrivateRoute'
+import Header from 'Components/Header/Header'
+import {Container} from 'Styled/Container'
 
 const Routes = () => (
-  <Router routes={routes}>
-    <Container>
-      <Header />
-      <Suspense fallback={null}>
-        <View />
-      </Suspense>
-    </Container>
-  </Router>
+  <Container>
+    <Header />
+    <Switch>
+      <Route path="/create" component={Create} />
+      <PrivateRoute path="/profile" roles={['User']} component={Create} />
+    </Switch>
+  </Container>
 )
 
 export default Routes

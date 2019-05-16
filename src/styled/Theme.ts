@@ -1,4 +1,4 @@
-// import facepaint from 'facepaint'
+import facepaint from 'facepaint'
 
 export const transitions = {
   default: '200ms ease-in-out',
@@ -58,8 +58,8 @@ export const colors = {
   ...gray,
 }
 
-// export const mq = facepaint([
-//   '@media(max-width: 420px)',
-//   '@media(max-width: 920px)',
-//   '@media(max-width: 1120px)',
-// ])
+export const mq = facepaint([
+  '@media(max-width: 420px)',
+  '@media(max-width: 920px)',
+  '@media(max-width: 1120px)',
+])

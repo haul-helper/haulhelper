@@ -66,7 +66,11 @@ export default {
       'node_modules',
     ],
     alias: {
-      h2: path.join(__dirname, 'src'),
+      Components: path.join(__dirname, 'src/components'),
+      Pages: path.join(__dirname, 'src/pages'),
+      Styled: path.join(__dirname, 'src/styled'),
+      Services: path.join(__dirname, 'src/services'),
+      Stores: path.join(__dirname, 'src/stores'),
     },
   },
   module: {

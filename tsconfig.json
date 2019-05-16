@@ -3,21 +3,23 @@
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
     "noFallthroughCasesInSwitch": true,
-    "noUnusedParameters": true,
+    // "noUnusedParameters": true,
     "noImplicitReturns": true,
     "moduleResolution": "node",
     "esModuleInterop": true,
     "noUnusedLocals": true,
     "noImplicitAny": true,
     "target": "es2015",
-    "module": "esNext",
+    "module": "es2015",
     "strict": true,
     "jsx": "react",
-    "baseUrl": ".",
+    "baseUrl": "src",
     "paths": {
-      "h2/*": [
-        "src/*"
-      ]
+      "Components": ["src/components"],
+      "Pages": ["src/pages"],
+      "Styled": ["src/styled"],
+      "Services": ["src/services"],
+      "Stores": ["src/stores"]
     }
   },
   "include": [
